@@ -10,9 +10,12 @@ router.get('/',auth,async(req,res)=>{
 
 
 
-router.get('/accounts',async(req,res)=>{
+router.get('/accounts',auth,async(req,res)=>{
 
-    const users=await User.find()
+const users=await User.find()
+ 
+
+   
 
     res.status(200).json(users)
   

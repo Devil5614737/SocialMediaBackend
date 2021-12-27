@@ -7,6 +7,8 @@ const signup=require('./routes/signup')
 const login=require('./routes/login');
 const post=require('./routes/post');
 const users=require('./routes/users');
+const conversation=require('./routes/conversations')
+const message=require('./routes/messages')
 
 
 
@@ -22,6 +24,8 @@ app.use('/signup',signup);
 app.use('/login',login);
 app.use('/post',post);
 app.use('/users',users);
+app.use('/conversations',conversation);
+app.use('/message',message);
 
 
 const port=process.env.PORT || 5000
